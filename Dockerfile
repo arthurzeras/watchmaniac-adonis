@@ -8,8 +8,8 @@ RUN npm i -g @adonisjs/cli
 
 RUN npm i
 
-COPY . .
+COPY . /app
 
 EXPOSE 3333
 
-CMD [ "npm", "start" ]
+CMD [ "npm", "run", "serve" ]
