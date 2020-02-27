@@ -7,7 +7,7 @@ class Serie extends Model {
   users() {
     return this
       .belongsToMany('App/Models/User')
-      .pivotModel('App/Model/SerieUser')
+      .pivotTable('serie_users')
   }
 }
 

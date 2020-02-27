@@ -5,11 +5,15 @@ const Model = use('Model')
 
 class SerieUser extends Model {
   users() {
-    return this.belongsToMany('App/Models/User')
+    return this.belongsTo('App/Models/User')
   }
 
   series() {
-    return this.hasMany('App/Models/Serie')
+    return this.belongsTo('App/Models/Serie')
+  }
+
+  static scopeIsWatchlist(query) {
+    return query.where({ type: 'watchlist' })
   }
 }
 
