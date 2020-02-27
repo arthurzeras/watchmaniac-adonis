@@ -25,5 +25,10 @@ Route.post('/sessions', 'SessionController.store')
 
 Route.post('/series', 'SerieController.store')
 
-Route.get('/watchlist', 'WatchlistController.index')
-Route.post('/watchlist', 'WatchlistController.store')
+Route.group(() => {
+  Route.get('/watchlist', 'WatchlistController.index')
+  Route.post('/watchlist', 'WatchlistController.store')
+
+  Route.get('/watched', 'WatchedController.index')
+  Route.post('/watched', 'WatchedController.store')
+}).middleware('auth')

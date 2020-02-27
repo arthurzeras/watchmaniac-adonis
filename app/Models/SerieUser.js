@@ -15,6 +15,10 @@ class SerieUser extends Model {
   static scopeIsWatchlist(query) {
     return query.where({ type: 'watchlist' })
   }
+
+  static scopeIsWatched(query) {
+    return query.where({ type: 'watched' })
+  }
 }
 
 module.exports = SerieUser

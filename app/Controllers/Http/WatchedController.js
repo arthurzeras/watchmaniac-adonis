@@ -2,9 +2,9 @@
 
 const SerieUserController = use('App/Controllers/Http/SerieUserController')
 
-class WatchlistController extends SerieUserController {
+class WatchedController extends SerieUserController {
   constructor() {
-    super('watchlist')
+    super('watched')
   }
 
   async index (config) {
@@ -16,4 +16,4 @@ class WatchlistController extends SerieUserController {
   }
 }
 
-module.exports = WatchlistController
+module.exports = WatchedController
