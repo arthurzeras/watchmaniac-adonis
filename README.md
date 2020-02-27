@@ -10,7 +10,7 @@ Is a API Rest to manage your TV Series with watchlist or already watched
 
 ### Up manually
 
-Configure a Postgres Database and set credentials on `.env` file
+> Note: You must configure a Postgres Database and set credentials on `.env` file
 
 ```bash
 npm install
