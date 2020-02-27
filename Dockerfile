@@ -2,14 +2,10 @@ FROM node:10
 
 WORKDIR /app
 
-COPY package*.json ./
-
 RUN npm i -g @adonisjs/cli
-
-RUN npm i
 
 COPY . /app
 
-EXPOSE 3333
+RUN npm i
 
-CMD [ "npm", "run", "serve" ]
+EXPOSE 3333

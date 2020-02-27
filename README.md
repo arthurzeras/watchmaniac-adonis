@@ -1,28 +1,19 @@
-# Adonis API application
+# Watchmaniac Adonis
 
-This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
+> This is a POC (proof of concept) for AdonisJS.
 
-1. Bodyparser
-2. Authentication
-3. CORS
-4. Lucid ORM
-5. Migrations and seeds
+Is a API Rest to manage your TV Series with watchlist or already watched
 
-## Setup
+### Up with docker
 
-Use the adonis command to install the blueprint
+`docker-compose up -d --build`
+
+### Up manually
+
+Configure a Postgres Database and set credentials on `.env` file
 
 ```bash
-adonis new yardstick --api-only
-```
-
-or manually clone the repo and then run `npm install`.
-
-
-### Migrations
-
-Run the following command to run startup migrations.
-
-```js
-adonis migration:run
+npm install
+adonis migation:run
+npm run serve
 ```
